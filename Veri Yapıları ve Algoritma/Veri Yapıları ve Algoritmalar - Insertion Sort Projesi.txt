@@ -1,0 +1,102 @@
+# Patika.dev - Veri Yapıları ve Algoritmalar - Insertion Sort Projesi
+
+
+**Proje 1**
+[22,27,16,2,18,6] -> Insertion Sort
+
+Yukarı verilen dizinin sort türüne göre aşamalarını yazınız.
+Big-O gösterimini yazınız.
+Time Complexity: Average case: Aradığımız sayının ortada olması,Worst case: Aradığımız sayının sonda olması, Best case: Aradığımız sayının dizinin en başında olması.
+Dizi sıralandıktan sonra 18 sayısı hangi case kapsamına girer? Yazınız.
+
+
+[7,3,5,8,2,9,4,15,6] dizisinin Insertion Sort'a göre ilk 4 adımını yazınız.
+
+
+**Çözüm:**
+
+**1. Sort türüne göre aşamaları:**
+
+[22,27,16,2,18,6] => 0. eleman 1. elemandan küçük olduğu için sonraki sıraya geçer.
+
+[22,27,16,2,18,6] => 1. eleman 2. elemandan büyük olduğu için yerleri değişir.
+	[22,16,27,2,18,6] => algoritma geri kontrol yapar ve 0. eleman ile 1. elemanı tekrar kontrol eder. 0.eleman 1. elemandan büyük olduğu için onlarıda yer değiştirir.
+
+[16,22,27,2,18,6] => 2. elemanla 3. elemanı karşılaştırır. 2. eleman büyük olduğu için yer değiştirir.
+	[16,22,2,27,18,6] => geri kontrolde 1. eleman ile 2. elemanı karşılaştırır. 1. eleman büyük olduğu için yer değiştirir.
+	[16,2,22,27,18,6] => geri kontrol ile 0. eleman ve 1. eleman karşılaştırılır. 0. eleman büyük olduğu için 1. elemanla yer değiştirilir.
+
+[2,16,22,27,18,6] => 3. ve 4. eleman karşılaştırılır. 3. eleman büyük olduğu için 4. elemanla yer değiştirir.
+	[2,16,22,18,27,6] => geri kontrolde 2. ve 3. elemanlar karşılaştırılır. 2. eleman büyük olduğu için yer değiştirir.
+	[2,16,18,22,27,6] => geri kontrol yapılır. 1. ve 2. eleman karşılaştırılır. 1. eleman küçük olduğu için yer değişimine gerek kalmaz. sonraki sıradan devam eder.
+
+[2,16,18,22,27,6] => 4. ve 5. elamanlar karşılaştırılır. 4. eleman büyük olduğu için yer değiştirilir.
+	[2,16,18,22,6,27] => geri kontrolünde 3. ve 4. elemanlar karşılaştırılır. soldaki 3. eleman büyük olduğu için yer değişimi yapılır.
+	[2,16,18,6,22,27] => geri kontrolü 2. ve 3. elemanlar karşılaştırılır. 2. büyük olduğu için yer değiştirilir.
+	[2,16,6,18,22,27] => geri kontrolü 1. ve 2. elemanlar karşılaştırılır. 1. büyük olduğu için yer değiştirilir.
+	[2,6,16,18,22,27] => geri kontrolü 0. ve 1. elemanlar karşılaştırılır. 0. küçük olduğu için değişim yapılmaz. sağda başka sıra kalmadığı için işlem sonlanır.
+
+Sonuç: [2,6,16,18,22,27]
+
+
+
+
+**2. Big-O gösterimi:** 
+
+En kötü ihtimalde (elemanlar büyükten küçüğe sıralanacak olursa) her eleman başına diğer tüm elemanların kontrolü gerekeceği için :
+
+Sonuç: Big-O (n2)   --- n kare
+
+
+
+
+**3.  Time Complexity:**
+
+En kötü ihtimalde (elemanlar büyükten küçüğe sıralanacak olursa) her eleman başına diğer tüm elemanların kontrolü gerekeceği için :
+
+Sonuç: Worst Case
+
+
+
+
+**4.  18 sayısı :**
+
+18 sayısı orijinal dizide, ortadan sonra, sondan 2. sırada olduğu için kendisinden önceki bütün sayıların işlem görmesi gerekmektedir. Bu da daha az adımla işlemi bitirme konusunda olumsuz bir sonuç ortaya çıkartır. Bu nedenle:
+
+Sonuç: Worst Case
+
+
+
+
+Son Satır: [7,3,5,8,2,9,4,15,6] dizisinin Insertion Sort'a göre ilk 4 adımını yazınız.
+
+ilk hali : [7,3,5,8,2,9,4,15,6]
+1.adım   : [3,7,5,8,2,9,4,15,6]
+2.adım   : [3,5,7,8,2,9,4,15,6]
+3.adım   : [3,5,7,2,8,9,4,15,6]
+4.adım   : [3,5,2,7,8,9,4,15,6]
+5.adım   : [3,2,5,7,8,9,4,15,6]
+6.adım   : [2,3,5,7,8,9,4,15,6]
+
+
+
+**[ ---> Patika Profilim](https://app.patika.dev/baykalcelik)**
+
+**[https://www.patika.dev](https://www.patika.dev)**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
